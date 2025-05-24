@@ -446,7 +446,7 @@ async def create_page(
         title=title,
         body=content,
         parent_id=parent_id,
-        is_markdown=True,
+        is_markdown=False,
     )
     result = page.to_simplified_dict()
     return json.dumps(
@@ -504,7 +504,7 @@ async def update_page(
         body=content,
         is_minor_edit=is_minor_edit,
         version_comment=version_comment,
-        is_markdown=True,
+        is_markdown=False,
         parent_id=actual_parent_id,
     )
     page_data = updated_page.to_simplified_dict()
